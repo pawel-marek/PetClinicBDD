@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Items>
+  <ExpectedMenuItems>
+    <Value>Home</Value>
+    <Value>Find owners</Value>
+    <Value>Veterinarians</Value>
+    <Value>Error</Value>
+    <Value>Help</Value>
+  </ExpectedMenuItems>
+  <ExpectedNewPet>
+    <Value>Name</Value>
+    <Value>Reksio</Value>
+    <Value>Birth Date</Value>
+    <Value>2017-09-03</Value>
+    <Value>Type</Value>
+    <Value>hamster</Value>
+  </ExpectedNewPet>
+</Items>
