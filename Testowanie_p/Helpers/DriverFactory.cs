@@ -18,7 +18,7 @@ namespace PetClinic.Tests
             switch (driverType)
             {
                 case DriverType.Chrome:
-                    return ChromeOK();
+                    return StartChromeOptions();
                     break;
                 case DriverType.Firefox:
                     driver = new FirefoxDriver();
@@ -39,7 +39,7 @@ namespace PetClinic.Tests
             Edge
         }
 
-        private static IWebDriver ChromeOK()
+        private static IWebDriver StartChromeOptions()
         { 
              ChromeOptions options = new ChromeOptions();
              options.AddArgument("--start-maximized");

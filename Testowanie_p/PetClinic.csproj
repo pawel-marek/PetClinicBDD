@@ -94,6 +94,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindNewOwner.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\TheNewPet.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TheNewPet.feature</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\DriverExtensions.cs" />
     <Compile Include="Helpers\NetStatHelper.cs" />
     <Compile Include="Helpers\StartServer.cs" />
@@ -103,16 +108,12 @@
     <Compile Include="POM_Sites\FindOwners.cs" />
     <Compile Include="POM_Sites\Home.cs" />
     <Compile Include="POM_Sites\NewPet.cs" />
-    <Compile Include="POM_Sites\NewVisit.cs" />
     <Compile Include="POM_Sites\OwnerInformation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Steps\CheckHomePageSteps.cs" />
     <Compile Include="Steps\FindInvalidPetOwner.cs" />
-    <Compile Include="Tests\Gender.cs" />
-    <Compile Include="Tests\GUITests.cs" />
-    <Compile Include="Tests\ProjectTestBase.cs" />
+    <Compile Include="Steps\TheNewPet.cs" />
     <Compile Include="Tests\TestHook.cs" />
-    <Compile Include="Tests\TestPet.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -123,6 +124,10 @@
     <None Include="Features\FindNewOwner.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>FindNewOwner.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\TheNewPet.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>TheNewPet.feature.cs</LastGenOutput>
     </None>
     <None Include="log.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -135,13 +140,11 @@
   <ItemGroup>
     <Content Include="..\packages\Chromium.ChromeDriver.2.33\content\chromedriver.exe">
       <Link>chromedriver.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="TestConfiguration\TestData.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>
-    </Content>
-    <Content Include="TestConfiguration\UrlsData.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup />

@@ -23,22 +23,10 @@ namespace PetClinic.POM_Sites
 
         public IWebDriver Driver { get; set; }
 
-        //private readonly string WebUrl;
-
-        protected BaseClass(IWebDriver driver/*, string loadUrl = ""*/)
+        protected BaseClass(IWebDriver driver)
         {
             this.Driver = driver;
         }
-
-        //public void GoToSite()
-        //{
-        //    Driver.Navigate().GoToUrl(WebUrl);
-        //}
-      
-
-
-
-
 
         public void ClickOnElement(IWebElement element)
         {
@@ -68,6 +56,13 @@ namespace PetClinic.POM_Sites
                 .Until(Drv => Drv.Url.Equals((expectedUrl)));
         }
 
+        public void WaitForPageTitle(string titleContains)
+        {
+            new WebDriverWait(Driver, TimeSpan.FromSeconds(Wait))
+              .Until(ExpectedConditions.TitleContains(titleContains));
+        }
+
+
         public void GetClassAttribute(IWebElement element, string attribute, string atributeValue)
         {
             new WebDriverWait(Driver, TimeSpan.FromSeconds(Wait)).
@@ -80,14 +75,7 @@ namespace PetClinic.POM_Sites
                 .Until(ExpectedConditions.InvisibilityOfElementLocated(by));
         }
 
-        public string MainUrl()
-        {
-            XmUrlsStructure url = new XmUrlsStructure();
-            string UrlXml = url.ParseXml("/Items/ExpectedMenuItems/Value");
-
-            return UrlXml;
-        }
-
+    
 
 
 
